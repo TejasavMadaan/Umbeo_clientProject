@@ -1,13 +1,23 @@
 package com.example.umbeo.response_data;
 
-public class LoginResponse {
-    private String status,token;
-    private com.example.umbeo.response_data.user user;
+import com.google.gson.annotations.SerializedName;
 
-    public LoginResponse(String status, String token, com.example.umbeo.response_data.user user) {
+public class LoginResponse {
+
+
+
+
+    @SerializedName("status")
+    private String status;
+
+    @SerializedName("data")
+    private String token;
+
+
+    public LoginResponse(String status, String token) {
         this.status = status;
         this.token = token;
-        this.user = user;
+
     }
 
     public String getStatus() {
@@ -18,7 +28,5 @@ public class LoginResponse {
         return token;
     }
 
-    public com.example.umbeo.response_data.user getUser() {
-        return user;
-    }
+
 }
