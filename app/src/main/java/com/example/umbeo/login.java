@@ -115,12 +115,16 @@ public class login extends AppCompatActivity {
 
                                 LoginResponse loginResponse = response.body();
                                 if (loginResponse.getStatus().toString().matches("success")) {
+
+
+                                    String id = loginResponse.getToken();
                                     SharedprefManager.getInstance(com.example.umbeo.login.this)
                                             .saveToken(loginResponse.getToken());
+                                   // Toast.makeText(getApplicationContext(),"ID: "+ id,Toast.LENGTH_LONG).show();
                                     Toast.makeText(com.example.umbeo.login.this,"Login Successful",Toast.LENGTH_LONG).show();
                                     login.setEnabled(true);
                                     Toast.makeText(com.example.umbeo.login.this,"Go to Cart to complete Payment",Toast.LENGTH_LONG).show();
-                                    startActivity(new Intent(getApplicationContext(),Payment.class));
+                                    startActivity(new Intent(getApplicationContext(),Example.class));
                                     // startActivity(new Intent(login.this, shopscreen.class));
                                 }
                                 else{

@@ -7,6 +7,7 @@ import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.Header;
 import retrofit2.http.POST;
 
 public interface Api {
@@ -44,4 +45,72 @@ public interface Api {
             @Field("password") String password
     );
 
+    @FormUrlEncoded
+    @POST("update-me")
+    Call<forgetpassword_response> updateProfile(
+            @Header("Authorization")  String header,
+            @Field("shop") String shop,
+            @Field("name") String name,
+            @Field("profile_pic") String profilePic,
+            @Field("phone") String number
+    );
+
+    @FormUrlEncoded
+    @POST("update-me")
+    Call<forgetpassword_response> updateName(
+      @Header("Authorization") String header,
+      @Field("shop") String shop,
+      @Field("name") String name
+    );
+
+    @FormUrlEncoded
+    @POST("update-me")
+    Call<forgetpassword_response> updateAddress(
+            @Header("Authorization") String header,
+            @Field("shop") String shop,
+            @Field("delivery_addresses") String[] address
+    );
+
+    @FormUrlEncoded
+    @POST("update-me")
+    Call<forgetpassword_response> updateImage(
+            @Header("Authorization") String header,
+            @Field("shop") String shop,
+            @Field("profile_pic") String pic
+    );
+
+    @FormUrlEncoded
+    @POST("update-me")
+    Call<forgetpassword_response> updateNumber(
+            @Header("Authorization") String header,
+            @Field("shop") String shop,
+            @Field("phone") String number
+    );
+
+    @FormUrlEncoded
+    @POST("update-me")
+    Call<forgetpassword_response> updateNumbandImage(
+            @Header("Authorization") String header,
+            @Field("shop") String shop,
+            @Field("phone") String number,
+            @Field("profile_pic") String pic
+    );
+
+    @FormUrlEncoded
+    @POST("update-me")
+    Call<forgetpassword_response> updateNameandImage(
+            @Header("Authorization") String header,
+            @Field("shop") String shop,
+            @Field("name") String name,
+            @Field("profile_pic") String pic
+    );
+
+    @FormUrlEncoded
+    @POST("update-me")
+    Call<forgetpassword_response> updateNameandNumber(
+            @Header("Authorization") String header,
+            @Field("shop") String shop,
+            @Field("name") String name,
+            @Field("phone") String number
+    );
 }

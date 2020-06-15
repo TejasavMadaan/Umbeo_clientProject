@@ -24,10 +24,10 @@
             android:layout_gravity="center"
             android:fontFamily="sans-serif"
             android:gravity="center"
-            android:text="Update Name "
+            android:text="Update Address "
             android:textAlignment="center"
             android:textColor="@color/colorTextSecondary"
-            android:textSize="32dp"
+            android:textSize="22dp"
             android:textStyle="bold"
             android:visibility="visible"
             app:layout_constraintEnd_toEndOf="parent"
@@ -36,16 +36,7 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:visibility="visible" />
 
-        <ImageView
-            android:paddingTop="20dp"
-            android:id="@+id/dp"
-            android:layout_width="89dp"
-            android:layout_height="89dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="10dp"
-            android:adjustViewBounds="true"
-            android:layout_centerInParent="true"
-            android:src="@drawable/ic_profile_pic"/>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -53,38 +44,38 @@
             android:layout_centerInParent="true"
             android:gravity="center"
             android:orientation="vertical"
-            android:paddingTop="60dp"
+            android:paddingTop="80dp"
             app:layout_constraintVertical_bias="1.0">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Name"
+                android:text="Address 1"
                 android:layout_marginRight="148dp"
                 android:textStyle="bold"
                 />
 
             <EditText
-                android:id="@+id/username"
+                android:id="@+id/address"
                 android:layout_width="358dp"
                 android:layout_height="57dp"
-                android:hint="Enter New Name"
+                android:hint="Enter Address"
                 app:layout_constraintHorizontal_bias="0.315"
                 app:layout_constraintVertical_bias="0.309" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Phone"
+                android:text="Address 2"
                 android:layout_marginRight="148dp"
                 android:layout_marginTop="5dp"
                 android:textStyle="bold"/>
 
             <EditText
-                android:id="@+id/number"
+                android:id="@+id/address2"
                 android:layout_width="358dp"
                 android:layout_height="57dp"
-                android:hint="Enter Phone Number to change"
+                android:hint="Enter Address"
                 app:layout_constraintHorizontal_bias="0.315"
                 app:layout_constraintVertical_bias="0.14" />
 
@@ -113,25 +104,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintVertical_bias="0.502" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginTop="30dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="*To change profile picture click on profile logo"
-                android:layout_gravity="center"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="*No Field is compulsory"
-                    android:layout_gravity="center"/>
-
-
-        </LinearLayout>
     </LinearLayout>
 </RelativeLayout>

@@ -15,7 +15,7 @@ import androidx.fragment.app.Fragment;
 public class ProfileFragment extends Fragment {
 
     ImageView lichi,strawbe,address;
-    TextView editName;
+    TextView editName,editAddress;
 
     @Nullable
     @Override
@@ -27,6 +27,15 @@ public class ProfileFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 EditNameFragment frag= new EditNameFragment();
+                getFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
+            }
+        });
+
+        editAddress = (TextView) v.findViewById(R.id.editAddress);
+        editAddress.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditAddressFragment frag = new EditAddressFragment();
                 getFragmentManager().beginTransaction().replace(R.id.fragment_container, frag).commit();
             }
         });
